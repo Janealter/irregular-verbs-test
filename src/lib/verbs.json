@@ -1,5 +1,23 @@
 [
   {
+    "name": "n/ne",
+    "desc": "",
+    "verbs": [
+      ["bear", "bore", "borne"],
+      ["blow", "blew", "blown"],
+      ["draw", "drew", "drawn"],
+      ["fly", "flew", "flown"],
+      ["grow", "grew", "grown"],
+      ["know", "knew", "known"],
+      ["lie", "lay", "lain"],
+      ["rise", "rose", "risen"],
+      ["see", "saw", "seen"],
+      ["tear", "tore", "torn"],
+      ["throw", "threw", "thrown"],
+      ["wear", "wore", "worn"]
+    ]
+  },
+  {
     "name": "same",
     "desc": "",
     "verbs": [
