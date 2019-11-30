@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html --public-url .",
+    "deploy": "rm -rf dist && npm run build && gh-pages -d dist"
   },
   "browserslist": [
     "last 1 chrome versions",
@@ -16,6 +17,7 @@
   "license": "ISC",
   "devDependencies": {
     "@babel/polyfill": "^7.7.0",
+    "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
     "svelte": "^3.16.0"
