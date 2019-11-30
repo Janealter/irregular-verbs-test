@@ -1,0 +1,16 @@
+[
+  {
+    "name": "same",
+    "desc": "",
+    "verbs": [
+      ["cost", "cost", "cost"]
+    ]
+  },
+  {
+    "name": "old",
+    "desc": "",
+    "verbs": [
+      ["sale", "sold", "sold"]
+    ]
+  }
+]
