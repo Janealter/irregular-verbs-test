@@ -20,6 +20,7 @@
   header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     width: 100%;
   }
   @media (max-width: 1080px) {
@@ -31,7 +32,7 @@
     margin: 15px 0;
   }
   :global(.header-button) {
-    margin: 0 5px;
+    margin: 5px;
   }
 </style>
 

@@ -101,6 +101,7 @@
     text-align: center;
   }
   :global(.main-button) {
+    height: 40px;
     margin: 5px;
   }
   :global(.check-button) {
