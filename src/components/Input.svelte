@@ -26,7 +26,7 @@
 </style>
 
 <div class={$$props.class}>
-  <input name={name} />
+  <input name={name} autocomplete="off"/>
   {#if error}
     <p>{error}</p>
   {/if}
