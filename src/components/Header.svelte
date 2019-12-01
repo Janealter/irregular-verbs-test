@@ -10,7 +10,13 @@
   }
 
   function getAllVerbs (verbsByCategories) {
-    return verbsByCategories.reduce((acc, { verbs }) => [...acc, ...verbs], []);
+    return verbsByCategories.reduce((acc, { verbs }) => {
+      return [...acc, ...removeSameVerbs(verbs, acc)];
+    }, []);
+  }
+
+  function removeSameVerbs (verbsToRemove, verbs) {
+    return verbsToRemove.filter(verb => !verbs.some(vrb => vrb[0] === verb[0]));
   }
 
   export let handleCategoryClick;
