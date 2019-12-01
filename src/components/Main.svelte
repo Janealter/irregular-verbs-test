@@ -82,6 +82,7 @@
   @media (max-width: 1080px) {
     form {
       flex-direction: column;
+      margin-top: 15px;
     }
   }
   .message.success {
