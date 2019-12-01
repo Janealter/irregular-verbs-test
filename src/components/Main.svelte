@@ -15,6 +15,14 @@
     setNewVerb();
   }
 
+  function setNewVerb () {
+    errors = [];
+    message = '';
+    if (formElement) formElement.reset();
+    setVerb();
+    isCheckAnswerDisabled = false;
+  }
+
   function setVerb () {
     verb = getRandomVerb(verbs);
     hiddenForms = getTwoRandomNumbers(3);
@@ -46,18 +54,14 @@
 
   function checkAnswer (firstForm, secondForm, thirdForm) {
     return [
-      firstForm === null || firstForm === verb[0] ? null : verb[0],
-      secondForm === null || secondForm === verb[1] ? null : verb[1],
-      thirdForm === null || thirdForm === verb[2] ? null : verb[2],
+      checkForm(firstForm, verb[0]) ? null : verb[0],
+      checkForm(secondForm, verb[1]) ? null : verb[1],
+      checkForm(thirdForm, verb[2]) ? null : verb[2],
     ];
   }
 
-  function setNewVerb () {
-    errors = [];
-    message = '';
-    if (formElement) formElement.reset();
-    setVerb();
-    isCheckAnswerDisabled = false;
+  function checkForm (form, expectedForm) {
+    return form === null || form.replace(/\s/g, '') === expectedForm.replace(/\s/g, '');
   }
 
   export let verbs;
