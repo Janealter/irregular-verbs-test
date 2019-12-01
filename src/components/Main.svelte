@@ -5,6 +5,7 @@
   import Button from './Button';
 
   let verb;
+  let remainingVerbs;
   let hiddenForms;
   let formElement;
   let errors = [];
@@ -12,19 +13,26 @@
   let isCheckAnswerDisabled = false;
 
   $: if (verbs) {
+    remainingVerbs = verbs;
     setNewVerb();
   }
 
   function setNewVerb () {
     errors = [];
     message = '';
-    if (formElement) formElement.reset();
-    setVerb();
     isCheckAnswerDisabled = false;
+    if (formElement) formElement.reset();
+    if (verb) remainingVerbs = remainingVerbs.filter(vrb => vrb[0] !== verb[0]);
+    if (remainingVerbs.length) {
+      setVerb();
+    } else {
+      verb = null;
+      message = 'That\'s all! Please choose another category';
+    }
   }
 
   function setVerb () {
-    verb = getRandomVerb(verbs);
+    verb = getRandomVerb(remainingVerbs);
     hiddenForms = getTwoRandomNumbers(3);
   }
 
@@ -79,9 +87,15 @@
     display: flex;
     margin-top: 30vh;
   }
+  .message.info {
+    margin-top: 30vh;
+  }
   @media (max-width: 1080px) {
     form {
       flex-direction: column;
+      margin-top: 15px;
+    }
+    .message.info {
       margin-top: 15px;
     }
   }
@@ -140,5 +154,12 @@
       <Button class="main-button" onClick={setNewVerb}>Next verb</Button>
     </form>
   {/if}
-  <p class="message" class:success={message.includes('Right')} class:danger={message.includes('Wrong')}>{message}</p>
+  <p
+    class="message"
+    class:success={message.includes('Right')}
+    class:danger={message.includes('Wrong')}
+    class:info={message.includes('all')}
+  >
+    {message}
+  </p>
 </main>
