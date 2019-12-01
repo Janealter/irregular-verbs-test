@@ -6,6 +6,8 @@
   let currentCategoryName = "not chosen";
   let pointsCount = 0;
 
+  $: pointsCountText = verbs ? `${pointsCount} / ${verbs.length}` : pointsCount;
+
   function onCategoryClick (name, selectedVerbs) {
     verbs = selectedVerbs;
     currentCategoryName = name;
@@ -44,7 +46,7 @@
 
 <Header handleCategoryClick={onCategoryClick} />
 <p><b>Current category:</b> {currentCategoryName}</p>
-<p><b>Points:</b> {pointsCount}</p>
+<p><b>Points:</b> {pointsCountText}</p>
 {#if verbs}
   <Main verbs={verbs} onRightAnswer={() => { pointsCount++; }} />
 {/if}
