@@ -1,7 +1,7 @@
 [
   {
     "name": "n/ne",
-    "desc": "",
+    "desc": "У третьей формы на конце n/ne",
     "verbs": [
       ["bear", "bore", "borne"],
       ["blow", "blew", "blown"],
@@ -12,23 +12,219 @@
       ["lie", "lay", "lain"],
       ["rise", "rose", "risen"],
       ["see", "saw", "seen"],
+      ["sew", "sewed", "sewn"],
+      ["swear", "swore", "sworn"],
       ["tear", "tore", "torn"],
       ["throw", "threw", "thrown"],
       ["wear", "wore", "worn"]
     ]
   },
   {
-    "name": "same",
-    "desc": "",
+    "name": "vowel",
+    "desc": "Формы отличаются гласной в закрытом слоге",
     "verbs": [
-      ["cost", "cost", "cost"]
+      ["begin", "began", "begun"],
+      ["drink", "drank", "drunk"],
+      ["ring", "rang", "rung"],
+      ["sing", "sang", "sung"],
+      ["swim", "swam", "swum"]
     ]
   },
   {
-    "name": "old",
-    "desc": "",
+    "name": "t",
+    "desc": "К первой форме прибавляется t на конце",
     "verbs": [
-      ["sale", "sold", "sold"]
+      ["deal", "dealt", "dealt"],
+      ["dream", "dreamt, dreamed", "dreamt, dreamed"],
+      ["learn", "learnt", "learnt"],
+      ["mean", "meant", "meant"],
+      ["smell", "smelled, smelt", "smelled, smelt"],
+      ["spell", "spelled, spelt", "spelled, spelt"],
+      ["spill", "spilled, spilt", "spilled, spilt"],
+      ["spoil", "spoiled, spoilt", "spoiled, spoilt"]
+    ]
+  },
+  {
+    "name": "t-basis",
+    "desc": "То же самое, как \"t\", но сокращается слог основы",
+    "verbs": [
+      ["feel", "felt", "felt"],
+      ["keep", "kept", "kept"],
+      ["leave", "left", "left"],
+      ["sleep", "slept", "slept"],
+      ["sweep", "swept", "swept"]
+    ]
+  },
+  {
+    "name": "ed",
+    "desc": "У третьей формы на конце ed",
+    "verbs": [
+      ["burn", "burnt", "burned"],
+      ["light", "lit, lighted", "lit, lighted"],
+      ["show", "showed", "shown, showed"]
+    ]
+  },
+  {
+    "name": "auxiliary",
+    "desc": "Вспомогательные и модальные глаголы, которые лучше учить отдельно",
+    "verbs": [
+      ["be (is, are, am)", "was, were", "been"],
+      ["can", "could", "--"],
+      ["do", "did", "done"],
+      ["have", "had", "had"],
+      ["go", "went", "gone"],
+      ["may", "might", "--"]
+    ]
+  },
+  {
+    "name": "vowel-end",
+    "desc": "Меняется гласная в конце",
+    "verbs": [
+      ["dig", "dug", "dug"],
+      ["get", "got", "got, gotten"],
+      ["hang", "hung", "hung"],
+      ["hold", "held", "held"],
+      ["shine", "shone, shined", "shone, shined"],
+      ["sink", "sank", "sunk"],
+      ["sit", "sat", "sat"],
+      ["stick", "stuck", "stuck"],
+      ["sting", "stung", "stung"],
+      ["stink", "stank, stunk", "stunk"],
+      ["win", "won", "won"]
+    ]
+  },
+  {
+    "name": "ee/ea-e",
+    "desc": "Ee/ea в первой форме меняется на e",
+    "verbs": [
+      ["bleed", "bled", "bled"],
+      ["feed", "fed", "fed"],
+      ["lead", "led", "led"],
+      ["meet", "met", "met"]
+    ]
+  },
+  {
+    "name": "same",
+    "desc": "Все три формы одинаковые",
+    "verbs": [
+      ["beat", "beat", "beat, beaten"],
+      ["bet", "bet", "bet"],
+      ["broadcast", "broadcast", "broadcast"],
+      ["burst", "burst", "burst"],
+      ["cast", "cast", "cast"],
+      ["cost", "cost", "cost"],
+      ["cut", "cut", "cut"],
+      ["hit", "hit", "hit"],
+      ["hurt", "hurt", "hurt"],
+      ["let", "let", "let"],
+      ["put", "put", "put"],
+      ["set", "set", "set"],
+      ["shut", "shut", "shut"],
+      ["split", "split", "split"],
+      ["spread", "spread", "spread"]
+    ]
+  },
+  {
+    "name": "ought/aught",
+    "desc": "Вторая и третья формы оканчиваются на ought/aught (читается [o:t])",
+    "verbs": [
+      ["bring", "brought", "brought"],
+      ["buy", "bought", "bought"],
+      ["catch", "caught", "caught"],
+      ["fight", "fought", "fought"],
+      ["teach", "taught", "taught"],
+      ["think", "thought", "thought"]
+    ]
+  },
+  {
+    "name": "d-t",
+    "desc": "D на конце первой формы меняется на t",
+    "verbs": [
+      ["bend", "bent", "bent"],
+      ["build", "built", "built"],
+      ["lend", "lent", "lent"],
+      ["send", "sent", "sent"],
+      ["spend", "spent", "spent"]
+    ]
+  },
+  {
+    "name": "same-2-3",
+    "desc": "Другие глаголы, у которых вторая и третья формы одинаковые",
+    "verbs": [
+      ["find", "found", "found"],
+      ["grind", "ground", "ground"],
+      ["hear", "heard", "heard"],
+      ["light", "lit, lighted", "lit, lighthed"],
+      ["lose", "lost", "lost"],
+      ["make", "made", "made"],
+      ["read", "read", "read"],
+      ["shoot", "shot", "shot"],
+      ["show", "showed", "shown, showed"],
+      ["strike", "struck", "stricken, struck"],
+      ["wake(n)", "woke, waked", "woke(n), waked"]
+    ]
+  },
+  {
+    "name": "same-1-3",
+    "desc": "Первая и третья формы одинаковые",
+    "verbs": [
+      ["become", "became", "become"],
+      ["come", "came", "come"],
+      ["run", "ran", "run"]
+    ]
+  },
+  {
+    "name": "ay-aid",
+    "desc": "Ay меняется на aid",
+    "verbs": [
+      ["lay", "laid", "laid"],
+      ["pay", "paid", "paid"],
+      ["say", "said", "said"]
+    ]
+  },
+  {
+    "name": "ell-old",
+    "desc": "Ell меняется на old",
+    "verbs": [
+      ["retell", "retold", "retold"],
+      ["sell", "sold", "sold"],
+      ["tell", "told", "told"]
+    ]
+  },
+  {
+    "name": "stand",
+    "desc": "Глаголы от stand",
+    "verbs": [
+      ["stand", "stood", "stood"],
+      ["understand", "understood", "understood"]
+    ]
+  },
+  {
+    "name": "en",
+    "desc": "У третьей формы на конце en",
+    "verbs": [
+      ["awake", "awoke, awakened", "awoken"],
+      ["beat", "beat", "beat, beaten"],
+      ["bite", "bit", "bitten"],
+      ["break", "broke", "broken"],
+      ["choose", "chose", "chosen"],
+      ["drive", "drove", "driven"],
+      ["eat", "ate", "eaten"],
+      ["fall", "fell", "fallen"],
+      ["forbid", "forbade", "forbidden"],
+      ["forget", "forgot", "forgotten"],
+      ["forgive", "forgave", "forgiven"],
+      ["freeze", "froze", "frozen"],
+      ["give", "gave", "given"],
+      ["hide", "hid", "hidden"],
+      ["mistake", "mistook", "mistaken"],
+      ["ride", "rode", "ridden"],
+      ["shake", "shook", "shaken"],
+      ["speak", "spoke", "spoken"],
+      ["steal", "stole", "stolen"],
+      ["strike", "struck", "stricken"],
+      ["take", "took", "taken"],
+      ["write", "wrote", "written"]
     ]
   }
 ]
