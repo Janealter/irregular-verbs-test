@@ -69,7 +69,7 @@
   }
 
   function checkForm (form, expectedForm) {
-    return form === null || form.replace(/\s/g, '') === expectedForm.replace(/\s/g, '');
+    return form === null || form.replace(/\s/g, '').toLowerCase() === expectedForm.replace(/\s/g, '');
   }
 
   export let verbs;
