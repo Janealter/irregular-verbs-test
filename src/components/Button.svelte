@@ -1,6 +1,7 @@
 <script>
   export let onClick = undefined;
   export let isDisabled = false;
+  export let title = undefined;
 </script>
 
 <style>
@@ -36,6 +37,12 @@
   }
 </style>
 
-<button class={$$props.class} disabled={isDisabled} type={onClick ? "button" : "submit"} on:click={onClick}>
+<button
+  class={$$props.class}
+  disabled={isDisabled}
+  type={onClick ? "button" : "submit"}
+  title={title}
+  on:click={onClick}
+>
   <slot />
 </button>

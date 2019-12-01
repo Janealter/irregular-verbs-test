@@ -38,8 +38,8 @@
 
 <header>
   <p><b>Choose category:</b></p>
-  <Button class="header-button" onClick={() => { onCategoryClick('all'); }}>ALL</Button>
+  <Button class="header-button" title="Все" onClick={() => { onCategoryClick('all'); }}>ALL</Button>
   {#each verbsByCategories as { name, desc, verbs }}
-    <Button class="header-button" onClick={() => { onCategoryClick(name); }}>{name}</Button>
+    <Button class="header-button" title={desc} onClick={() => { onCategoryClick(name); }}>{name}</Button>
   {/each}
 </header>
