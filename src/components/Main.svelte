@@ -9,6 +9,7 @@
   let formElement;
   let errors = [];
   let message = '';
+  let isCheckAnswerDisabled = false;
 
   $: if (verbs) {
     setNewVerb();
@@ -39,6 +40,8 @@
     } else {
       message = 'Wrong answer!';
     }
+
+    isCheckAnswerDisabled = true;
   }
 
   function checkAnswer (firstForm, secondForm, thirdForm) {
@@ -54,6 +57,7 @@
     message = '';
     if (formElement) formElement.reset();
     setVerb();
+    isCheckAnswerDisabled = false;
   }
 
   export let verbs;
@@ -127,7 +131,7 @@
       {:else}
         <p class="verb">{verb[2]}</p>
       {/if}
-      <Button class="main-button check-button">Check answer</Button>
+      <Button class="main-button check-button" isDisabled={isCheckAnswerDisabled}>Check answer</Button>
       <Button class="main-button" onClick={setNewVerb}>Next verb</Button>
     </form>
   {/if}

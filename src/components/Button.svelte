@@ -1,5 +1,6 @@
 <script>
   export let onClick = undefined;
+  export let isDisabled = false;
 </script>
 
 <style>
@@ -25,11 +26,16 @@
   button:active {
     filter: brightness(0.7);
   }
+  button:disabled {
+    cursor: not-allowed;
+    box-shadow: none;
+    filter: grayscale(0.5);
+  }
   button::-moz-focus-inner {
     border: 0;
   }
 </style>
 
-<button class={$$props.class} type={onClick ? "button" : "submit"} on:click={onClick}>
+<button class={$$props.class} disabled={isDisabled} type={onClick ? "button" : "submit"} on:click={onClick}>
   <slot />
 </button>
