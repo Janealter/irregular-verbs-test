@@ -20,6 +20,7 @@
   :global(body) {
     height: 100%;
     margin: 0;
+    overflow-y: scroll;
   }
   :global(#root) {
     height: 100%;
@@ -33,6 +34,11 @@
     align-items: center;
     flex-wrap: wrap;
     width: 100%;
+  }
+  @media (max-width: 1080px) {
+    nav {
+      justify-content: center;
+    }
   }
   p {
     margin: 0;
