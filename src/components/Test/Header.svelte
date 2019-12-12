@@ -1,6 +1,6 @@
 <script>
-  import verbsByCategories from '../lib/verbs';
-  import Button from './Button';
+  import verbsByCategories from '../../lib/verbs';
+  import Button from '../Button';
 
   function onCategoryClick (name) {
     let verbs = [];
@@ -37,15 +37,15 @@
   p {
     margin: 15px 0;
   }
-  :global(.header-button) {
+  :global(.test-header-button) {
     margin: 5px;
   }
 </style>
 
 <header>
   <p><b>Choose category:</b></p>
-  <Button class="header-button" title="Все" onClick={() => { onCategoryClick('all'); }}>ALL</Button>
+  <Button class="test-header-button" title="Все" onClick={() => { onCategoryClick('all'); }}>ALL</Button>
   {#each verbsByCategories as { name, desc, verbs }}
-    <Button class="header-button" title={desc} onClick={() => { onCategoryClick(name); }}>{name}</Button>
+    <Button class="test-header-button" title={desc} onClick={() => { onCategoryClick(name); }}>{name}</Button>
   {/each}
 </header>

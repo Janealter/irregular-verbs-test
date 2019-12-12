@@ -1,8 +1,9 @@
 <script>
   import { onMount, afterUpdate } from 'svelte';
-  import { getRandomNumber, getTwoRandomNumbers } from '../utils/random';
-  import Input from './Input';
-  import Button from './Button';
+
+  import { getRandomNumber, getTwoRandomNumbers } from '../../utils/random';
+  import Input from '../Input';
+  import Button from '../Button';
 
   let verb;
   let remainingVerbs;
@@ -116,18 +117,18 @@
     border: 1px solid lightgreen;
     border-radius: 6px;
   }
-  :global(.main-input) {
+  :global(.test-main-input) {
     width: 250px;
     margin: 5px;
   }
-  :global(.main-input > input) {
+  :global(.test-main-input > input) {
     text-align: center;
   }
-  :global(.main-button) {
+  :global(.test-main-button) {
     height: 40px;
     margin: 5px;
   }
-  :global(.check-button) {
+  :global(.test-check-button) {
     background-color: lightgreen !important;
   }
 </style>
@@ -136,22 +137,22 @@
   {#if verb && hiddenForms}
     <form bind:this={formElement} on:submit={onFormSubmit}>
       {#if hiddenForms.includes(1)}
-        <Input class="main-input" name="first-form" error={errors[0]} />
+        <Input class="test-main-input" name="first-form" error={errors[0]} />
       {:else}
         <p class="verb">{verb[0]}</p>
       {/if}
       {#if hiddenForms.includes(2)}
-        <Input class="main-input" name="second-form" error={errors[1]} />
+        <Input class="test-main-input" name="second-form" error={errors[1]} />
       {:else}
         <p class="verb">{verb[1]}</p>
       {/if}
       {#if hiddenForms.includes(3)}
-        <Input class="main-input" name="third-form" error={errors[2]} />
+        <Input class="test-main-input" name="third-form" error={errors[2]} />
       {:else}
         <p class="verb">{verb[2]}</p>
       {/if}
-      <Button class="main-button check-button" isDisabled={isCheckAnswerDisabled}>Check answer</Button>
-      <Button class="main-button" onClick={setNewVerb}>Next verb</Button>
+      <Button class="test-main-button test-check-button" isDisabled={isCheckAnswerDisabled}>Check answer</Button>
+      <Button class="test-main-button" onClick={setNewVerb}>Next verb</Button>
     </form>
   {/if}
   <p

@@ -1,17 +1,12 @@
 <script>
-  import Header from './components/Header';
-  import Main from './components/Main';
+  import Button from './components/Button';
+  import Test from './components/Test';
+  import VerbsList from './components/VerbsList';
 
-  let verbs;
-  let currentCategoryName = "not chosen";
-  let pointsCount = 0;
+  let mode = 'not chosen';
 
-  $: pointsCountText = verbs ? `${pointsCount} / ${verbs.length}` : pointsCount;
-
-  function onCategoryClick (name, selectedVerbs) {
-    verbs = selectedVerbs;
-    currentCategoryName = name;
-    pointsCount = 0;
+  function onModeClick (modeName) {
+    mode = modeName;
   }
 </script>
 
@@ -33,20 +28,29 @@
   :global(*) {
     box-sizing: border-box;
   }
+  nav {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+  }
   p {
     margin: 0;
     padding: 15px 0;
   }
-  @media (max-width: 1080px) {
-    p {
-      text-align: center;
-    }
+  :global(.mode-button) {
+    margin: 5px;
   }
 </style>
 
-<Header handleCategoryClick={onCategoryClick} />
-<p><b>Current category:</b> {currentCategoryName}</p>
-<p><b>Points:</b> {pointsCountText}</p>
-{#if verbs}
-  <Main verbs={verbs} onRightAnswer={() => { pointsCount++; }} />
+<nav>
+  <p><b>Mode:</b></p>
+  <Button class="mode-button" onClick={() => { onModeClick('test'); }} isSelected={mode === 'test'}>test</Button>
+  <Button class="mode-button" onClick={() => { onModeClick('verbs-list'); }} isSelected={mode === 'verbs-list'}>verbs list</Button>
+</nav>
+{#if mode === 'test'}
+  <Test />
+{/if}
+{#if mode === 'verbs-list'}
+  <VerbsList />
 {/if}
