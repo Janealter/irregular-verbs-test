@@ -3,15 +3,27 @@
   import Main from './Main';
 
   let verbs;
-  let currentCategoryName = "not chosen";
-  let pointsCount = 0;
+  let currentCategoryName = 'not chosen';
+  let pointsCount;
+  let remainingVerbsCount;
 
-  $: pointsCountText = verbs ? `${pointsCount} / ${verbs.length}` : pointsCount;
+  $: if (verbs) {
+    remainingVerbsCount = verbs.length;
+  }
 
   function onCategoryClick (name, selectedVerbs) {
     verbs = selectedVerbs;
     currentCategoryName = name;
     pointsCount = 0;
+    remainingVerbsCount = verbs.length;
+  }
+
+  function onRightAnswer () {
+    pointsCount++;
+  }
+
+  function onNextVerb () {
+    remainingVerbsCount--;
   }
 </script>
 
@@ -29,7 +41,8 @@
 
 <Header handleCategoryClick={onCategoryClick} />
 <p><b>Current category:</b> {currentCategoryName}</p>
-<p><b>Points:</b> {pointsCountText}</p>
 {#if verbs}
-  <Main verbs={verbs} onRightAnswer={() => { pointsCount++; }} />
+  <p><b>Points:</b> {`${pointsCount} / ${verbs.length}`}</p>
+  <p><b>Remaining verbs:</b> {remainingVerbsCount}</p>
+  <Main verbs={verbs} onRightAnswer={onRightAnswer} onNextVerb={onNextVerb} />
 {/if}

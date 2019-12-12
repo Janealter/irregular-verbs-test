@@ -23,7 +23,10 @@
     message = '';
     isCheckAnswerDisabled = false;
     if (formElement) formElement.reset();
-    if (verb) remainingVerbs = remainingVerbs.filter(vrb => vrb[0] !== verb[0]);
+    if (verb) {
+      remainingVerbs = remainingVerbs.filter(vrb => vrb[0] !== verb[0]);
+      onNextVerb();
+    }
     if (remainingVerbs.length) {
       setVerb();
     } else {
@@ -75,6 +78,7 @@
 
   export let verbs;
   export let onRightAnswer;
+  export let onNextVerb;
 </script>
 
 <style>
