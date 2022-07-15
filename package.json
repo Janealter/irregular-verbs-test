@@ -20,6 +20,6 @@
     "gh-pages": "^2.1.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
-    "svelte": "^3.16.0"
+    "svelte": "^3.49.0"
   }
 }
